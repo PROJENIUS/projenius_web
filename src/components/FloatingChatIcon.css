@@ -1,0 +1,17 @@
+.floating-chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  background-color: #5e5e5e;
+  color: white;
+  padding: 14px;
+  border-radius: 50%;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.floating-chat-icon:hover {
+  background-color: #cbcbcb;
+  text-decoration: none;
+}

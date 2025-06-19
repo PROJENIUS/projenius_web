@@ -1,0 +1,279 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f8f9fb;
+  color: #333;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Hero Section - Contact Header */
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f1f5f9;
+  margin-bottom: 2rem;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  color: #555;
+}
+
+/* Main Contact Section */
+.contact-main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+  background: white;
+  gap: 2rem;
+}
+
+/* Left side: plain */
+.contact-left {
+  flex: 1 1 400px;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding-top: 80px;
+}
+
+.contact-left h2 {
+  font-size: 2rem; /* Increase the title size */
+  font-weight: bold;
+  padding-left: 25px;
+  padding-top: 1px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-left p {
+  font-size: 1.2rem; /* Improve readability */
+  padding-left: 15px; 
+  color: #444; /* Slightly darker for better contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Right side: card style */
+.contact-right {
+  flex: 1 1 550px;
+  background: #f0f4f8;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Floating Robo Image */
+.contact-left img {
+  margin-top: 1rem;
+  width: 360px;
+  margin-left: 80px;
+  padding-left: 105px;
+  animation: floatRobo 3s ease-in-out infinite;
+}
+
+@keyframes floatRobo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+input,
+select,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 220px;       /* increased for a better look */
+  resize: vertical;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+
+button {
+  padding: 0.8rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #1b5edb;
+}
+
+.response-time {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: #f8f9fb;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.faq-button {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-flex-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.faq-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.7rem;
+  max-width: 1100px;
+  justify-content: center;
+}
+
+.faq-item {
+  background: white;
+  width: 45%; /* Two per row */
+  min-width: 300px;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.faq-item:hover {
+  background-color: #f0f4ff;
+}
+
+.faq-item strong {
+  font-size: 1rem;
+  color: #222;
+  display: block;
+  margin-top: 5px;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  color: #444;
+}
+
+.faq-answer.open {
+  max-height: 200px;
+  opacity: 1;
+}
+
+
+
+/* Social Section */
+.social-section {
+  background: #e7f0ff;
+  text-align: center;
+  padding: 3rem;
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+
+.social-icons {
+  color: #1f246c;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-icons i {
+  color: #1f246c;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);    
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .contact-main {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .contact-right {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,123 @@
+/* Prevent horizontal scrolling on entire page */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.about-us-container {
+  width: 100%; /* full viewport width */
+  padding: 120px 40px 40px 40px; /* padding all around */
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* stretch children full width */
+  box-sizing: border-box;
+}
+
+.about-us-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+}
+
+.about-us-left {
+  flex: 1 1 55%;
+  max-width: none; /* remove max-width */
+  box-sizing: border-box;
+}
+
+.about-us-left h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.2;
+  margin: 0;
+  word-break: break-word;
+}
+
+.about-us-right {
+  flex: 1 1 40%;
+  max-width: none; /* remove max-width */
+  box-sizing: border-box;
+  padding-left: 40px;
+  overflow-x: hidden;
+}
+
+.about-us-right p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-us-video {
+  width: 100%;
+  max-width: none; /* remove max-width */
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+.about-us-video iframe {
+  width: 1450px;
+  height: 570px;
+  border-radius: 10px;
+  background-color: #000;
+  display: block;
+  box-sizing: content-box;
+  box-shadow: #000;
+}
+
+/* Responsive for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .about-us-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-us-left,
+  .about-us-right {
+    max-width: 100%;
+    flex: none;
+    padding-left: 0;
+  }
+
+  .about-us-left h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+
+  .about-us-right p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-us-right p {
+    font-size: 1rem;
+  }
+
+  .about-us-video iframe {
+    height: 250px;
+  }
+}
+
+/* Extra safeguard for very small devices */
+@media (max-width: 400px) {
+  .about-us-container {
+    padding: 60px 20px 40px 20px;
+  }
+}
+

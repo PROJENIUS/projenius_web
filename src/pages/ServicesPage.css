@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 1rem;
+  padding-top: 90px;
+  padding-bottom: 1rem;
+  background-color: #f0f4f8;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.primary-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.secondary-btn {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+/* Services Section */
+.services-section {
+  padding: 2rem 2rem;
+  text-align: center;
+  background-color: none;
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+  max-width: 2200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 2rem;
+  padding-top: 100px;
+  margin-top: 40px;
+  width: 430px;
+  height: 360px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+}
+
+.icon1 {
+  width: 40px;
+  height: 40px;
+}
+
+.service-card .icon1 {
+  margin-bottom: 1rem;
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin-left: 135px;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  margin-top: -25px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.service-card a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+.service-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* Project Showcase Section */
+
+.why-choose-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+.why-choose-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: #fff;
+  padding: 0;
+  text-align: left;
+}
+
+.icon-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.icon1 {
+  font-size: 2.5rem;
+  color: #1f246c;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  margin-right: 20px;
+}
+
+.icon-text h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+}
+
+.icon-text p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+
+/* How It Works */
+.how-it-works {
+  padding: 4rem 2rem;
+  background: #ffffff;
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.step {
+  max-width: 260px;
+  text-align: center;
+}
+
+.step i {
+  font-size: 2rem;
+  color: #1f246c;
+  background: #e0f2fe;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.step p {
+  color: #555;
+}
+
+/* CTA */
+.cta {
+  background: #0f172a;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 30px;
+}
+
+.cta button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta button:hover {
+  background: #19e4e8;
+}
+/* Add a keyframe animation for icon pop */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animate icons on hover in Why Choose section */
+.why-item i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.why-item:hover i {
+  color: #0056d2;
+  animation: pop 0.5s ease;
+}
+
+/* Animate icons on hover in How It Works */
+.step i {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.step:hover i {
+  background-color: #7da1e9;
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Smooth button hover for CTA */
+.cta button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta button:hover {
+  background-color: #7da1e9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade-in animation for second row */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-in {
+  animation: fadeInUp 1.5s ease-out forwards;
+}
