@@ -20,6 +20,9 @@ const Footer = () => {
         <div className="footer-section title-footer">
           <h1>Projenius</h1>
           <p>Connecting talent with projects, smarter</p>
+          <div id="translate-container" className="footer-translate">
+            <div id="google_translate_element"></div>
+          </div>
         </div>
 
         {/* Column 2: Quick Links */}
@@ -40,13 +43,14 @@ const Footer = () => {
           <h3 className="footer-title2">Contact Us</h3>
           <div className="footer-contact">
             <FaEnvelope className="footer-icon" />
-            <span>teamprojenius@gmail.com</span>
+             <a href="mailto:teamprojenius@gmail.com">teamprojenius@gmail.com</a>
           </div>
           <div className="footer-contact">
             <FaPhoneAlt className="footer-icon" />
-            <span>+91 89254 50473</span>
+            <a href="tel:+918925450473">+91 89254 50473</a>
           </div>
           <div className="footer-social">
+            <h3>Follow Us</h3>
             <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
                   <FaInstagram />
                 </a>
@@ -57,9 +61,7 @@ const Footer = () => {
                   <FaWhatsapp />
                 </a>
           </div>
-          <div id="translate-container" className="footer-translate">
-            <div id="google_translate_element"></div>
-          </div>
+          
         </div>
 
         {/* Column 4: Map */}
@@ -86,3 +88,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+git add src/components/Footer.tsx src/components/Footer.css
+
