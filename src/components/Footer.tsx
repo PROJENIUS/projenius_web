@@ -89,5 +89,5 @@ const Footer = () => {
 
 export default Footer;
 
-git add src/components/Footer.tsx src/components/Footer.css
+
 
