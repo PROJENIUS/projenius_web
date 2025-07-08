@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import './Testimonials.css';
 
 interface Testimonial {
@@ -9,9 +9,6 @@ interface Testimonial {
 }
 
 const Testimonials: React.FC = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const cardWidth = 450 + 20; // card width + gap (match CSS)
-
   const testimonials: Testimonial[] = [
     {
       id: 'U1',
@@ -51,52 +48,22 @@ const Testimonials: React.FC = () => {
     },
   ];
 
-  const extendedTestimonials: Testimonial[] = [
-    ...testimonials.slice(-2),
-    ...testimonials,
-    ...testimonials.slice(0, 2),
-  ];
-
-  // Infinite animation
-  useEffect(() => {
-    const scroll = scrollRef.current;
-    if (!scroll) return;
-
-    scroll.scrollLeft = cardWidth; // start at 1st real card
-    let animationFrameId: number;
-
-    const step = () => {
-      scroll.scrollLeft += 1.0; // speed (adjustable)
-
-      // Wrap logic
-      if (scroll.scrollLeft >= (testimonials.length + 2) * cardWidth) {
-        scroll.scrollLeft = cardWidth;
-      }
-
-      animationFrameId = requestAnimationFrame(step);
-    };
-
-    animationFrameId = requestAnimationFrame(step);
-
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [testimonials]);
+  // Duplicate the testimonials to make seamless infinite loop
+  const loopedTestimonials = [...testimonials, ...testimonials];
 
   return (
     <div className="testimonials-container">
       <h2 className="testimonials-title">What They Say About Us</h2>
-
-      {/* Arrow buttons are optional now */}
-      {/* <div className="arrow-button arrow-left">←</div>
-      <div className="arrow-button arrow-right">→</div> */}
-
-      <div ref={scrollRef} className="testimonials-scroll no-scrollbar">
-        {extendedTestimonials.map((t, index) => (
-          <div key={index} className="testimonial-card">
-            <div className="testimonial-rating">{'⭐'.repeat(t.rating)}</div>
-            <div className="testimonial-name">{t.name}</div>
-            <p className="testimonial-text">"{t.text}"</p>
-          </div>
-        ))}
+      <div className="testimonial-loop-wrapper">
+        <div className="testimonial-loop-track">
+          {loopedTestimonials.map((t, index) => (
+            <div key={index} className="testimonial-card">
+              <div className="testimonial-rating">{'⭐'.repeat(t.rating)}</div>
+              <div className="testimonial-name">{t.name}</div>
+              <p className="testimonial-text">"{t.text}"</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -14,22 +14,28 @@
   margin-bottom: 20px;
 }
 
-/* Final scroll area fix */
-.testimonials-scroll {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 20px 0;
-  gap: 20px;
-  max-width: 100%;
-  margin: 0 auto;
+/* Infinite Loop Wrapper */
+.testimonial-loop-wrapper {
+  overflow: hidden;
+  width: 100%;
   position: relative;
 }
 
-/* Remove gradient overlay */
-.testimonials-container::before,
-.testimonials-container::after {
-  display: none;
+/* Looping track */
+.testimonial-loop-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollLoop 40s linear infinite;
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .testimonial-card {
@@ -57,11 +63,6 @@
   font-weight: bold;
   font-size: 1.1rem;
   margin-top: 1px;
-}
-
-.testimonial-role {
-  font-size: 0.9rem;
-  color: #666;
 }
 
 .testimonial-text {
@@ -98,13 +99,7 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-/* Optional pause on hover */
-.testimonials-scroll:hover {
-  animation-play-state: paused !important;
 }

@@ -59,7 +59,10 @@
   transform: rotateY(180deg);
   box-shadow: 0 15px 40px #00fff2;
 }
-.project-card-front, .project-card-back {
+
+/* ✅ Modified this to stack content vertically */
+.project-card-front,
+.project-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -68,24 +71,31 @@
   overflow: hidden;
   box-shadow: 0 4px 12px #0000000d;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column; /* 👈 ensures vertical stacking */
 }
+
 .project-card-front {
   background-color: white;
   z-index: 2;
 }
+
 .project-card-back {
   background-color: #fff;
   transform: rotateY(180deg);
   padding: 1rem;
   text-align: left;
 }
+
 .projects-section {
   background-color: #e9eff7;
-  padding: 4rem ;
+  padding: 4rem;
   text-align: center;
-  margin-top: 5rem;}
+  margin-top: 5rem;
+}
+
+.category {
+  margin-top: 10px;
+}
 
 .project-grid {
   display: grid;
@@ -95,6 +105,7 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .project-card-inner {
   position: relative;
   width: 100%;
@@ -113,7 +124,7 @@
 }
 
 .banner-blue {
-  background-color:#1f1f21 ;
+  background-color: #1f1f21;
 }
 
 .project-content p {
@@ -126,4 +137,35 @@
   color: #2563eb;
   font-weight: 600;
   text-decoration: none;
+}
+
+/* Background image section (top of front card) */
+.project-front-top {
+  height: 70%;
+  width: 100%;
+  background-image: url("../img/qnpaper.jpeg"); /* Replace this with your image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay on image (if needed, not used now) */
+.project-banner {
+  background-color: #0000004e; /* Optional dark overlay for readability */
+  padding: 1.5rem;
+  border-radius: 28px;
+}
+
+/* ✅ Label section (bottom of front card) */
+.project-front-label {
+  height: 30%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
 }

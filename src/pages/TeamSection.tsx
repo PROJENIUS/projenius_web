@@ -1,42 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 import './TeamSection.css';
+declare function require(path: string): any;
+
 
 const teamMembers = [
   {
     id: 'TM1',
     name: 'Karthick Ganesh M',
-    role: 'CEO & Co-founder',
+    role: 'Founder & CEO',
     quote: 'The dreamer who turned "what if" into "what’s next."',
     icons: [
-    <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
-      <FaInstagram />
-    </a>,
-    <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer">
-      <FaYoutube />
-    </a>,
-    <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp />
-    </a>
-  ],
-    image: require('../img/Karthiganesh.jpeg'), // ✅ Add image path
+      <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
+      <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
+      <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>,
+    ],
+    image: require('../img/Karthiganesh.jpeg'),
   },
   {
     id: 'TM2',
     name: 'Harshini M',
-    role: 'Embedded Engineer',
+    role: 'Co-Founder & Embedded Engineer',
     quote: 'The brain behind the machines you never see but can’t live without',
     icons: [
-    <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
-      <FaInstagram />
-    </a>,
-    <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer">
-      <FaYoutube />
-    </a>,
-    <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp />
-    </a>
-  ],
+      <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
+      <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
+      <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>,
+    ],
     image: require('../img/Harshini.jpeg'),
   },
   {
@@ -45,16 +35,10 @@ const teamMembers = [
     role: 'ML Engineer',
     quote: 'Teaching machines to think smarter than ever before.',
     icons: [
-    <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
-      <FaInstagram />
-    </a>,
-    <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer">
-      <FaYoutube />
-    </a>,
-    <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp />
-    </a>
-  ],
+      <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
+      <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
+      <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>,
+    ],
     image: require('../img/Madhumithaa.jpeg'),
   },
   {
@@ -63,16 +47,10 @@ const teamMembers = [
     role: 'IoT Engineer',
     quote: 'Making everyday objects talk, think, and act smart.',
     icons: [
-    <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
-      <FaInstagram />
-    </a>,
-    <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer">
-      <FaYoutube />
-    </a>,
-    <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp />
-    </a>
-  ],
+      <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
+      <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
+      <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>,
+    ],
     image: require('../img/Kanimozhi.jpeg'),
   },
   {
@@ -81,16 +59,10 @@ const teamMembers = [
     role: 'Web Developer',
     quote: 'Coding the internet one pixel-perfect page at a time.',
     icons: [
-    <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
-      <FaInstagram />
-    </a>,
-    <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer">
-      <FaYoutube />
-    </a>,
-    <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp />
-    </a>
-  ],
+      <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
+      <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
+      <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>,
+    ],
     image: require('../img/Hariharan.jpeg'),
   },
   {
@@ -99,16 +71,10 @@ const teamMembers = [
     role: 'App Developer',
     quote: 'Crafting apps that fit in your palm but power your world.',
     icons: [
-    <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
-      <FaInstagram />
-    </a>,
-    <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer">
-      <FaYoutube />
-    </a>,
-    <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp />
-    </a>
-  ],
+      <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
+      <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
+      <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>,
+    ],
     image: require('../img/Abhinanda.jpeg'),
   },
   {
@@ -117,16 +83,10 @@ const teamMembers = [
     role: 'UI/UX Developer',
     quote: 'Designing feels, not just screens.',
     icons: [
-    <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
-      <FaInstagram />
-    </a>,
-    <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer">
-      <FaYoutube />
-    </a>,
-    <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp />
-    </a>
-  ],
+      <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
+      <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
+      <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>,
+    ],
     image: require('../img/Harini.jpg'),
   },
   {
@@ -135,16 +95,10 @@ const teamMembers = [
     role: 'Data Analyst',
     quote: 'Finding stories in spreadsheets and truth in trends.',
     icons: [
-    <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
-      <FaInstagram />
-    </a>,
-    <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer">
-      <FaYoutube />
-    </a>,
-    <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp />
-    </a>
-  ],
+      <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
+      <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
+      <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>,
+    ],
     image: require('../img/Abinaya.jpeg'),
   },
   {
@@ -153,16 +107,10 @@ const teamMembers = [
     role: 'Video Editor',
     quote: 'Turning clips into captivating stories, frame by frame.',
     icons: [
-    <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
-      <FaInstagram />
-    </a>,
-    <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer">
-      <FaYoutube />
-    </a>,
-    <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp />
-    </a>
-  ],
+      <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
+      <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
+      <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>,
+    ],
     image: require('../img/Balaji.jpeg'),
   },
 ];
@@ -170,6 +118,16 @@ const teamMembers = [
 const scrollingTeam = [...teamMembers, ...teamMembers];
 
 const TeamSection = () => {
+  useEffect(() => {
+    const disableRightClick = (e: MouseEvent) => {
+      if ((e.target as HTMLElement).tagName === 'IMG') {
+        e.preventDefault();
+      }
+    };
+    document.addEventListener('contextmenu', disableRightClick);
+    return () => document.removeEventListener('contextmenu', disableRightClick);
+  }, []);
+
   return (
     <section className="team-section">
       <h2 className="section-title">Meet the ProJenius Team</h2>
@@ -179,7 +137,12 @@ const TeamSection = () => {
             <div className="team-card" key={index}>
               <div className="team-avatar">
                 {member.image ? (
-                  <img src={member.image} alt={member.name} />
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    draggable={false}
+                    style={{ userSelect: 'none', pointerEvents: 'none' }}
+                  />
                 ) : (
                   member.id
                 )}
