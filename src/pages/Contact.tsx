@@ -108,8 +108,10 @@ export default function ContactPage() {
   <img src={robotImg} alt="Projenius Robot" />
   <div className="contact-info">
     <h2>Reach Out Directly</h2>
-    <p>📧 teamprojenius@gmail.com</p>
-    <p>📞 +91 89254 50473</p>
+   
+
+    <a href="mailto:teamprojenius@gmail.com" className="emailg">📧 teamprojenius@gmail.com</a>
+    <a href="tel:+918925450473" className="phone">📞 +91 89254 50473</a>
     {/* <p>
       🕒 Operating Hours:<br />
       Monday - Friday, 9 AM - 5 PM IST

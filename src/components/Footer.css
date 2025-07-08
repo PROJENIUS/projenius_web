@@ -83,6 +83,7 @@
 }
 .footer-contact a{
    color: #cbd5e1;
+   text-decoration: none;
 }
 
 .footer-contact a:hover{

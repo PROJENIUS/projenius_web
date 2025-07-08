@@ -41,6 +41,14 @@
   color: #444;
   margin-bottom: 10px;
 }
+.terms-section a{
+  color: #333;
+}
+
+.terms-section a:hover{
+   color: #3b82f6; /* Brighter on hover */
+  text-decoration: none;
+}
 
 .terms-section ul {
   padding-left: 20px;

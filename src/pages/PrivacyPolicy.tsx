@@ -5,7 +5,7 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <div className="privacy-container">
       <h1 className="privacy-title">Privacy Policy</h1>
-      <p className="privacy-updated">Last updated: June, 2025</p>
+      <p className="privacy-updated">Last updated: June, 2025.</p>
 
       <section className="privacy-section">
         <p>
@@ -17,19 +17,19 @@ const PrivacyPolicy: React.FC = () => {
       <section className="privacy-section">
         <h2>1. Information We Collect</h2>
         <ul>
-          <li><strong>Personal Details:</strong> Name, email address, phone number (when you contact us)</li>
-          <li><strong>Project Information:</strong> Details shared with us for work</li>
-          <li><strong>Usage Data:</strong> Basic analytics (e.g., how you use our website)</li>
+          <li><strong>Personal Details:</strong> Name, email address, phone number (when you contact us).</li>
+          <li><strong>Project Information:</strong> Details shared with us for work.</li>
+          <li><strong>Usage Data:</strong> Basic analytics (e.g., how you use our website).</li>
         </ul>
       </section>
 
       <section className="privacy-section">
         <h2>2. How We Use Your Information</h2>
         <ul>
-          <li>To communicate with you</li>
-          <li>To work on and deliver your projects</li>
-          <li>To improve our website and services</li>
-          <li>To send occasional updates or service-related notices (if you opt-in)</li>
+          <li>To communicate with you.</li>
+          <li>To work on and deliver your projects.</li>
+          <li>To improve our website and services.</li>
+          <li>To send occasional updates or service-related notices (if you opt-in).</li>
         </ul>
       </section>
 
@@ -58,9 +58,9 @@ const PrivacyPolicy: React.FC = () => {
       <section className="privacy-section">
         <h2>6. Your Rights</h2>
         <ul>
-          <li>Know what data we store</li>
-          <li>Request edits or deletion of your personal info</li>
-          <li>Unsubscribe from any communications</li>
+          <li>Know what data we store.</li>
+          <li>Request edits or deletion of your personal info.</li>
+          <li>Unsubscribe from any communications.</li>
         </ul>
         <p>You can contact us anytime regarding your data rights.</p>
       </section>
@@ -76,7 +76,8 @@ const PrivacyPolicy: React.FC = () => {
         <h2>8. Contact Us</h2>
         <p>
           For any privacy-related questions or requests, reach us at: <br />
-          📧 <a href="mailto:teamprojenius@gmail.com">teamprojenius@gmail.com</a>
+          📧 <a href="mailto:teamprojenius@gmail.com">teamprojenius@gmail.com</a>.<br />
+          📞 <a href="tel:+918925450473">+91 89254 50473</a>.
         </p>
       </section>
     </div>

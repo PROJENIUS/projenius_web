@@ -24,25 +24,31 @@ declare global {
 }
 
 const App: React.FC = () => {
-  useEffect(() => {
-    const addGoogleTranslateScript = () => {
-      const script = document.createElement('script');
-      script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-      script.async = true;
-      document.body.appendChild(script);
+ useEffect(() => {
+    const initGoogleTranslate = () => {
+      if (!document.getElementById("google_translate_element")) return;
 
-      window.googleTranslateElementInit = () => {
-        new window.google.translate.TranslateElement(
-          { pageLanguage: 'en' },
-          'google_translate_element'
-        );
-      };
+      new window.google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
     };
 
-    if (!window.googleTranslateElementInit) {
-      addGoogleTranslateScript();
+    if (!window.google || !window.google.translate) {
+      if (!document.getElementById("google-translate-script")) {
+        const script = document.createElement("script");
+        script.id = "google-translate-script";
+        script.src =
+          "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        script.async = true;
+        document.body.appendChild(script);
+        window.googleTranslateElementInit = initGoogleTranslate;
+      }
+    } else {
+      initGoogleTranslate();
     }
   }, []);
+
 
   return (
     <BrowserRouter>

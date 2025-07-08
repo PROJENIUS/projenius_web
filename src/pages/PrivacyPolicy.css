@@ -41,6 +41,13 @@
   color: #444;
   margin-bottom: 10px;
 }
+.privacy-section a{
+  color: #333;
+}
+.privacy-section a:hover{
+  color: #3b82f6; /* Brighter on hover */
+  text-decoration: none;
+}
 
 .privacy-section ul {
   padding-left: 20px;
