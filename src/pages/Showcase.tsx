@@ -1,12 +1,16 @@
 import React, { useRef } from "react";
 import "./Showcase.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import client1 from "../img/client1.jpeg";
+import client6 from "../img/client-6.jpeg";
+import client2 from "../img/client2.jpg";
 
 type Project = {
   title: string;
   category: string;
   description: string;
   rating: string;
+  image: string;
 };
 
 const projects: Project[] = [
@@ -16,6 +20,7 @@ const projects: Project[] = [
     description:
       "An IoT-based web app for automated ration distribution with smart weighing, billing, and inventory tracking. Prevents fraud and offers real-time monitoring.",
     rating: "Rating: ⭐⭐⭐⭐☆ (4/5)",
+    image: client1,
   },
   {
     title: "Smart Hospital Access System",
@@ -23,6 +28,7 @@ const projects: Project[] = [
     description:
       "Enhances hospital accessibility using IoT for smart parking and pothole detection. Aims for smoother emergency navigation and access control.",
     rating: "Rating: ⭐⭐⭐⭐⭐ (5/5)",
+    image: client2,
   },
   {
     title: "AI-Powered Water Health Monitoring",
@@ -30,6 +36,7 @@ const projects: Project[] = [
     description:
       "Real-time water quality monitoring with AI analysis and sensor integration. Includes chatbot support and live dashboard for insights.",
     rating: "Rating: ⭐⭐⭐⭐☆ (4/5)",
+    image: "/images/project3.jpg",
   },
   {
     title: "Road Hazard Detection and Notification",
@@ -37,6 +44,7 @@ const projects: Project[] = [
     description:
       "Detects road accidents using AI and IoT, sending instant GPS alerts. Supports emergency response with wearables and a web dashboard.",
     rating: "Rating: ⭐⭐⭐⭐⭐ (5/5)",
+    image: "/images/project4.jpg",
   },
   {
     title: "Smart Waste Management System",
@@ -44,6 +52,7 @@ const projects: Project[] = [
     description:
       "Uses sensors to detect and segregate wet and dry waste in tunnels. Sends live data to a dashboard for timely waste collection.",
     rating: "Rating: ⭐⭐⭐⭐☆ (4/5)",
+    image: "/images/project5.jpg",
   },
   {
     title: "Autonomous Follower Robot Van",
@@ -51,6 +60,7 @@ const projects: Project[] = [
     description:
       "Obstacle-avoiding robot van that follows users for military logistics. Ensures hands-free load transport in rugged terrains using sensors.",
     rating: "Rating: ⭐⭐⭐⭐⭐ (5/5)",
+    image: client6,
   },
 ];
 
@@ -88,7 +98,11 @@ const Showcase: React.FC = () => {
           <div className="project-card" key={index}>
             <div className="project-card-inner">
               <div className="project-card-front">
-                <div className="project-front-top"></div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                />
                 <div className="project-front-label">
                   <span>
                     <span style={{ color: "#00fff2" }}>Project</span> Showcase {index + 1}

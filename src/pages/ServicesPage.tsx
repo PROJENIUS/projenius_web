@@ -165,35 +165,33 @@ const ServicesPage: FC = () => {
 </section>
 
 
-      {/* How It Works */}
-      <section className="how-it-works">
-        <h2>How It Works: Getting Your Project Done</h2>
-        <div className="steps">
-          <div className="step">
-            <i className="fa-solid fa-clipboard-list"></i>
-            <h3>1. Post Your Project</h3>
-            <p>Clearly define your project scope, budget, and timeline in minutes.</p>
-          </div>
-          <div className="step">
-            <i className="fa-solid fa-hand-holding-dollar"></i>
-            <h3>2. Receive Bids</h3>
-            <p>Compare skills, timelines, and reviews in one place.
-Pick the right match with confidence.</p>
-          </div>
-          <div className="step">
-            <i className="fa-solid fa-people-arrows"></i>
-            <h3>3. Collaborate & Review</h3>
-            <p>Provide feedback to guide your freelancer.
-Work stays on track with transparent communication.
-</p>
-          </div>
-          <div className="step">
-            <i className="fa-solid fa-circle-check"></i>
-            <h3>4. Approve & Pay</h3>
-            <p>Release payment securely once you're fully satisfied with the outcome.</p>
-          </div>
-        </div>
-      </section>
+     {/* How It Works */}
+<section className="how-it-works">
+  <h2>How It Works: Getting Your Project Done</h2>
+  <div className="steps">
+    <div className="step">
+      <i className="fa-solid fa-clipboard-list"></i>
+      <h3>1. Post Your Project</h3>
+      <p>Define your project scope, budget, and timeline.</p>
+    </div>
+    <div className="step">
+      <i className="fa-solid fa-hand-holding-dollar"></i>
+      <h3>2. Confirm & Pay Advance</h3>
+      <p>Finalize terms and pay 35% advance to start.</p>
+    </div>
+    <div className="step">
+      <i className="fa-solid fa-people-arrows"></i>
+      <h3>3. Collaborate & Track</h3>
+      <p>Stay involved, share feedback, and track progress.</p>
+    </div>
+    <div className="step">
+      <i className="fa-solid fa-circle-check"></i>
+      <h3>4. Approve & Pay</h3>
+      <p>Once satisfied, approve and release the final payment.</p>
+    </div>
+  </div>
+</section>
+
 
       {/* Call to Action */}
       <section className="cta">

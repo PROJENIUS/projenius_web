@@ -11,10 +11,12 @@ import {
   FaUserTie,
   FaHandshake,
   FaMoneyBillWave,
+  FaMoneyCheckAlt,
   FaLaptopCode,
   FaMobileAlt,
   FaMicrochip,
   FaPaintBrush,
+  FaComments,
   FaBrain,
   FaVideo,
 } from "react-icons/fa";
@@ -57,6 +59,7 @@ const Home = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          if (!cards) return;
           const index = Array.from(cards).indexOf(entry.target);
           if (entry.isIntersecting) {
             setVisibleCards((prev) => [...new Set([...prev, index])]);
@@ -70,10 +73,11 @@ const Home = () => {
     cards?.forEach((card) => observer.observe(card));
 
     // Top Categories Observer
-    const categoryCards = topCategoriesRef.current?.querySelectorAll(".animated-card");
+    const categoryCards = (topCategoriesRef.current as HTMLElement | null)?.querySelectorAll(".animated-card");
     const categoryObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          if (!categoryCards) return;
           const index = Array.from(categoryCards).indexOf(entry.target);
           if (entry.isIntersecting) {
             setVisibleCategoryCards((prev) => [...new Set([...prev, index])]);
@@ -166,27 +170,28 @@ const Home = () => {
           <img src={robotImg} className="running-robot" alt="Running Robot" />
           <div className="steps-grid">
             {[
-              {
-                icon: <FaFileAlt size={34} color="#00fff2" />,
-                title: "1. Post a Project",
-                desc: "Clearly describe what you need done, your budget, and timeline.",
-              },
-              {
-                icon: <FaUserTie size={34} color="#00fff2" />,
-                title: "2. Hire the Best",
-                desc: "Compare skills, timelines, and reviews in one place. Pick the right match with confidence.",
-              },
-              {
-                icon: <FaHandshake size={34} color="#00fff2" />,
-                title: "3. Work Together",
-                desc: "Provide feedback to guide your freelancer. Work stays on track with transparent communication.",
-              },
-              {
-                icon: <FaMoneyBillWave size={34} color="#00fff2" />,
-                title: "4. Pay Securely",
-                desc: "Release payment only when you are 100% satisfied with the work.",
-              },
-            ].map((step, i) => (
+  {
+    icon: <FaFileAlt size={34} color="#00fff2" />,
+    title: "1. Post a Project",
+    desc: "Clearly describe what you need done, your budget, and timeline.",
+  },
+  {
+    icon: <FaMoneyCheckAlt size={34} color="#00fff2" />,
+    title: "2. Confirm Project & Make Advance",
+    desc: "Discuss your requirements clearly with our team and confirm all terms. Pay the 35% advance along with hardware costs (if any) to start the project.",
+  },
+  {
+    icon: <FaComments size={34} color="#00fff2" />,
+    title: "3. Collaborate & Track Progress",
+    desc: "Work closely with us, provide timely feedback, and track the progress. We’ll keep you updated throughout the process.",
+  },
+  {
+    icon: <FaMoneyBillWave size={34} color="#00fff2" />,
+    title: "4. Pay Securely",
+    desc: "Release payment only when you are 100% satisfied with the work.",
+  },
+]
+.map((step, i) => (
               <div
                 key={i}
                 className={`step-card delay-${i + 1} ${visibleCards.includes(i) ? "animate" : ""}`}
