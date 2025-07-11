@@ -2,8 +2,15 @@ import React, { useRef } from "react";
 import "./Showcase.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import client1 from "../img/client1.jpeg";
-import client6 from "../img/client-6.jpeg";
 import client2 from "../img/client2.jpg";
+import client3 from "../img/client3.jpeg";
+import client4 from "../img/client4.jpeg";
+import client5 from "../img/client5.jpeg";
+import client6 from "../img/client-6.jpeg";
+
+
+
+
 
 type Project = {
   title: string;
@@ -36,7 +43,7 @@ const projects: Project[] = [
     description:
       "Real-time water quality monitoring with AI analysis and sensor integration. Includes chatbot support and live dashboard for insights.",
     rating: "Rating: ⭐⭐⭐⭐☆ (4/5)",
-    image: "/images/project3.jpg",
+    image: client3,
   },
   {
     title: "Road Hazard Detection and Notification",
@@ -44,7 +51,7 @@ const projects: Project[] = [
     description:
       "Detects road accidents using AI and IoT, sending instant GPS alerts. Supports emergency response with wearables and a web dashboard.",
     rating: "Rating: ⭐⭐⭐⭐⭐ (5/5)",
-    image: "/images/project4.jpg",
+    image: client4,
   },
   {
     title: "Smart Waste Management System",
@@ -52,7 +59,7 @@ const projects: Project[] = [
     description:
       "Uses sensors to detect and segregate wet and dry waste in tunnels. Sends live data to a dashboard for timely waste collection.",
     rating: "Rating: ⭐⭐⭐⭐☆ (4/5)",
-    image: "/images/project5.jpg",
+    image: client5,
   },
   {
     title: "Autonomous Follower Robot Van",

@@ -11,17 +11,7 @@
   z-index: 9999;
 }
 
-/*.chat-title {
-  background-color: #4b6cb7;
-  color: white;
-  padding: 10px 15px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}*/
+
 
 .chatbot-close-btn {
   background:none;
