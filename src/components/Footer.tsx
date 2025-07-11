@@ -9,6 +9,7 @@ import {
   FaPhoneAlt,
   FaWhatsapp,
   FaYoutube,
+  FaGithub,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -60,6 +61,10 @@ const Footer = () => {
                 <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp />
                 </a>
+                 {/* 👉 New GitHub Icon */}
+            <a href="https://github.com/PROJENIUS" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </a>
           </div>
           
         </div>

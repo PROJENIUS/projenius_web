@@ -45,7 +45,7 @@ const teamMembers = [
     id: 'TM4',
     name: 'Kanimozhi B',
     role: 'IoT Engineer',
-    quote: 'Making everyday objects talk, think, and act smart.',
+    quote: 'Making everyday objects talk, think, and act intelligently.',
     icons: [
       <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
       <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
@@ -57,7 +57,7 @@ const teamMembers = [
     id: 'TM5',
     name: 'Hariharan S',
     role: 'Web Developer',
-    quote: 'Coding the internet one pixel-perfect page at a time.',
+    quote: 'Coding the internet, one pixel-perfect page at a time — flawlessly.',
     icons: [
       <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
       <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
@@ -81,7 +81,7 @@ const teamMembers = [
     id: 'TM7',
     name: 'Harini P',
     role: 'UI/UX Developer',
-    quote: 'Designing feels, not just screens.',
+    quote: 'Designing meaningful experiences, not just screens to scroll.',
     icons: [
       <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
       <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,
@@ -93,7 +93,7 @@ const teamMembers = [
     id: 'TM8',
     name: 'Abinaya',
     role: 'Data Analyst',
-    quote: 'Finding stories in spreadsheets and truth in trends.',
+    quote: 'Finding stories in spreadsheets and uncovering truth in trends.',
     icons: [
       <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>,
       <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>,

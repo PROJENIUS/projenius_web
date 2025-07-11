@@ -11,48 +11,50 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
-const faqs = [
+const  faqs = [
   {
-    question: "How do I post a project?",
-    answer: "Sign up, go to your dashboard, and click on 'Post a Project.'"
+    question: "What services does ProJenius offer?",
+    answer: "We offer custom solutions in Machine Learning, Web Development, App Development, IoT integration, Graphic Designing, Video Editing, and Data Analysis. All projects are tailored to your requirements."
   },
   {
-    question: "How do I become a freelancer?",
-    answer: "Create an account and complete your freelancer profile to get started."
+    question: "How do I start a project with ProJenius?",
+    answer: "Simply contact us via email or phone. We’ll discuss your requirements, provide a quote, and plan the project accordingly."
   },
   {
-    question: "Is there a fee for using ProJenius?",
-    answer: "There are no fees for posting projects; freelancers pay a small commission on earnings."
+    question: "Is there an advance payment required?",
+    answer: "Yes, we require an advance payment of 35% of the total project cost before starting any work. This amount is non-refundable."
   },
   {
-    question: "How are disputes handled?",
-    answer: "We have a dedicated resolution team to mediate disputes and ensure fairness."
+    question: "What if my project involves hardware components?",
+    answer: "If we purchase the hardware for you, we will provide the original bill and include a small additional charge for transportation. Alternatively, you can provide the hardware yourself."
   },
   {
-    question: "Can I track project progress?",
-    answer: "Yes, use the built-in dashboard to monitor milestones and communications."
+    question: "How are changes to the project handled?",
+    answer: "Any major changes to the scope after the project has started may incur additional charges. We’ll always discuss and agree on such changes with you in writing."
   },
   {
-    question: "What if I'm not satisfied with the work?",
-    answer: "Open a resolution request, and our team will assist you with the next steps."
+    question: "What is the typical timeline for a project?",
+    answer: "Timelines vary based on the project’s complexity and your responsiveness. We’ll keep you updated and inform you if there are any delays."
   },
   {
-    question: "How do I reset my password?",
-    answer: "Click 'Forgot Password' on the login page and follow the instructions."
+    question: "Who owns the final deliverables?",
+    answer: "Once the full payment is made, you own the final deliverables. We may showcase non-confidential parts of the project in our portfolio unless you request otherwise."
   },
   {
-    question: "Can I delete my account?",
-    answer: "Yes, go to Account Settings and select 'Delete My Account.'"
+    question: "Is my information kept confidential?",
+    answer: "Yes, we respect your privacy and confidentiality. NDAs can also be signed upon request to ensure your information is secure."
   },
   {
-    question: "How do I edit my profile?",
-    answer: "Go to your dashboard, click on 'Account Settings', and update your details."
+    question: "Can I terminate a project midway?",
+    answer: "Yes, either party can terminate a project with written notice. However, the advance and hardware payments are non-refundable, and work done up to that point will be charged."
   },
   {
-    question: "Can I work on multiple projects at once?",
-    answer: "Yes, freelancers can take on multiple projects simultaneously based on their availability."
+    question: "How can I contact the ProJenius team?",
+    answer: "You can reach us by email at teamprojenius@gmail.com or by phone at +91 89254 50473."
   }
 ];
+
+
 
 export default function ContactPage() {
   const [showFAQs, setShowFAQs] = useState(false);
