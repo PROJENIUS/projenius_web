@@ -1,19 +1,16 @@
 import React from "react";
 import "./Footer.css";
 import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
   FaEnvelope,
   FaPhoneAlt,
-  FaWhatsapp,
+  FaInstagram,
   FaYoutube,
+  FaWhatsapp,
   FaGithub,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -28,15 +25,15 @@ const Footer = () => {
 
         {/* Column 2: Quick Links */}
         <div className="footer-section">
-        <h3 className="footer-title">Quick Links</h3>
-        <ul className="footer-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/services">Our Services</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li><Link to="/terms">Terms of Service</Link></li>
-          <li><Link to="/privacy">Privacy Policy</Link></li>
-        </ul>
+          <h3 className="footer-title">Quick Links</h3>
+          <ul className="footer-links">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/services">Our Services</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/terms">Terms of Service</Link></li>
+            <li><Link to="/privacy">Privacy Policy</Link></li>
+          </ul>
         </div>
 
         {/* Column 3: Contact */}
@@ -44,29 +41,50 @@ const Footer = () => {
           <h3 className="footer-title2">Contact Us</h3>
           <div className="footer-contact">
             <FaEnvelope className="footer-icon" />
-             <a href="mailto:teamprojenius@gmail.com">teamprojenius@gmail.com</a>
+            <a href="mailto:teamprojenius@gmail.com">teamprojenius@gmail.com</a>
           </div>
           <div className="footer-contact">
             <FaPhoneAlt className="footer-icon" />
             <a href="tel:+918925450473">+91 89254 50473</a>
           </div>
+
           <div className="footer-social">
             <h3>Follow Us</h3>
-            <a href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw==" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram />
-                </a>
-                <a href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU" target="_blank" rel="noopener noreferrer">
-                  <FaYoutube />
-                </a>
-                <a href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc" target="_blank" rel="noopener noreferrer">
-                  <FaWhatsapp />
-                </a>
-                 {/* 👉 New GitHub Icon */}
-            <a href="https://github.com/PROJENIUS?tab=repositories" target="_blank" rel="noopener noreferrer">
-              <FaGithub />
-            </a>
+            <div className="social-icons">
+              <a
+                href="https://www.instagram.com/projenius_?igsh=MXJwaGhtMWFieHQ4cw=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
+                <span>Instagram</span>
+              </a>
+              <a
+                href="https://youtube.com/@projenius-8?si=1TL7QX-uet87koQU"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube />
+                <span>YouTube</span>
+              </a>
+              <a
+                href="https://chat.whatsapp.com/BA9caXw5J9W3gNrSfiVSBc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href="https://github.com/PROJENIUS?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+                <span>GitHub</span>
+              </a>
+            </div>
           </div>
-          
         </div>
 
         {/* Column 4: Map */}
@@ -80,6 +98,7 @@ const Footer = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="Projenius Location"
           ></iframe>
         </div>
       </div>
@@ -93,6 +112,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
