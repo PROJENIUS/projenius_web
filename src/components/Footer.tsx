@@ -62,7 +62,7 @@ const Footer = () => {
                   <FaWhatsapp />
                 </a>
                  {/* 👉 New GitHub Icon */}
-            <a href="https://github.com/PROJENIUS" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/PROJENIUS?tab=repositories" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
           </div>
